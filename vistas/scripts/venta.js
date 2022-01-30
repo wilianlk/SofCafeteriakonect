@@ -202,8 +202,6 @@ function agregarDetalle(stock, idarticulo, articulo, precio_venta) {
     var cantidad = 1;
     var descuento = 0;
 
-    console.log(stock);
-
     if (stock == 0) {
         alert("Lo siento este producto ya no tiene unidades")
     } else {

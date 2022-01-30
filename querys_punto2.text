@@ -1,0 +1,24 @@
+SELECT  l.*, SUM(l.canti_p),IF( SUM(l.canti_p) > 1,'Productos con mismo Stock de los cuales son son los que mas tienen','Producto con mayor Stock' ) estado,
+GROUP_CONCAT(CONCAT_WS('Stock : ', CONCAT(' ',l.nombre, ' ')  , CAST( l.stock AS CHAR(7))) SEPARATOR ',') AS result
+FROM (
+  SELECT a.*,COUNT(*) canti_p
+  FROM  producto a
+  WHERE a.stock = (Select MAX(ar.stock) FROM producto ar)
+  GROUP BY a.idarticulo
+  ) l ;
+  
+
+
+SELECT prodmax.idarticulo,prodmax.nombre nombre_producto,prodmax.cantidad producto_mayor_vendido FROM (
+  SELECT d.idarticulo,a.nombre, count(d.idarticulo) as cantidad
+  FROM ventas v
+  INNER JOIN detalle_venta d ON d.idventa = v.idventa
+  INNER JOIN producto a ON a.idarticulo = d.idarticulo
+  GROUP BY d.idarticulo
+  HAVING cantidad = (
+    SELECT COUNT(*) 
+    FROM detalle_venta dv
+    GROUP BY dv.idarticulo
+    ORDER BY COUNT(*) DESC LIMIT 1
+  )
+) prodmax;
