@@ -13,9 +13,7 @@ if (!isset($_SESSION['nombre'])) {
 
         require_once "../modelos/Consultas.php";
         $consulta = new Consultas();
-        $rsptac = $consulta->totalcomprahoy();
-        $regc = $rsptac->fetch_object();
-        $totalc = $regc->total_compra;
+
 
         $rsptav = $consulta->totalventahoy();
         $regv = $rsptav->fetch_object();
