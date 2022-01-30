@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1658e5ba-0e73-439f-b1b0-e60f76b0622d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/konectacafe.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/querys_punto2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vistas/scripts/venta.js" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/scripts/venta.js" afterDir="false" />
-    </list>
+    <list default="true" id="1658e5ba-0e73-439f-b1b0-e60f76b0622d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,7 +44,7 @@
       <workItem from="1643523918743" duration="9142000" />
       <workItem from="1643548192567" duration="13355000" />
       <workItem from="1643563507712" duration="1005000" />
-      <workItem from="1643564640842" duration="1907000" />
+      <workItem from="1643564640842" duration="2293000" />
     </task>
     <servers />
   </component>
