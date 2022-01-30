@@ -198,29 +198,36 @@ function marcarImpuesto() {
     }
 }
 
-function agregarDetalle(idarticulo, articulo, precio_venta) {
+function agregarDetalle(stock, idarticulo, articulo, precio_venta) {
     var cantidad = 1;
     var descuento = 0;
 
-    if (idarticulo != "") {
-        var subtotal = cantidad * precio_venta;
-        var fila = '<tr class="filas" id="fila' + cont + '">' +
-            '<td><button type="button" class="btn btn-danger" onclick="eliminarDetalle(' + cont + ')">X</button></td>' +
-            '<td><input type="hidden" name="idarticulo[]" value="' + idarticulo + '">' + articulo + '</td>' +
-            '<td><input type="number" name="cantidad[]" id="cantidad[]" value="' + cantidad + '"></td>' +
-            '<td><input type="number" name="precio_venta[]" id="precio_venta[]" value="' + precio_venta + '"></td>' +
-            '<td><input type="number" name="descuento[]" value="' + descuento + '"></td>' +
-            '<td><span id="subtotal' + cont + '" name="subtotal">' + subtotal + '</span></td>' +
-            '<td><button type="button" onclick="modificarSubtotales()" class="btn btn-info"><i class="fa fa-refresh"></i></button></td>' +
-            '</tr>';
-        cont++;
-        detalles++;
-        $('#detalles').append(fila);
-        modificarSubtotales();
+    console.log(stock);
 
+    if (stock == 0) {
+        alert("Lo siento este producto ya no tiene unidades")
     } else {
-        alert("error al ingresar el detalle, revisar las datos del articulo ");
+        if (idarticulo != "") {
+            var subtotal = cantidad * precio_venta;
+            var fila = '<tr class="filas" id="fila' + cont + '">' +
+                '<td><button type="button" class="btn btn-danger" onclick="eliminarDetalle(' + cont + ')">X</button></td>' +
+                '<td><input type="hidden" name="idarticulo[]" value="' + idarticulo + '">' + articulo + '</td>' +
+                '<td><input type="number" name="cantidad[]" id="cantidad[]" value="' + cantidad + '"></td>' +
+                '<td><input type="number" name="precio_venta[]" id="precio_venta[]" value="' + precio_venta + '"></td>' +
+                '<td><input type="number" name="descuento[]" value="' + descuento + '"></td>' +
+                '<td><span id="subtotal' + cont + '" name="subtotal">' + subtotal + '</span></td>' +
+                '<td><button type="button" onclick="modificarSubtotales()" class="btn btn-info"><i class="fa fa-refresh"></i></button></td>' +
+                '</tr>';
+            cont++;
+            detalles++;
+            $('#detalles').append(fila);
+            modificarSubtotales();
+
+        } else {
+            alert("error al ingresar el detalle, revisar las datos del articulo ");
+        }
     }
+
 }
 
 function modificarSubtotales() {

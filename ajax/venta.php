@@ -19,9 +19,10 @@ $total_venta = isset($_POST["total_venta"]) ? limpiarCadena($_POST["total_venta"
 switch ($_GET["op"]) {
     case 'guardaryeditar':
 
-        $valistock = $venta->validarstockproducto($_POST["idarticulo"][0]);
+        $valistock =  $venta->validarstockproducto($_POST["idarticulo"][0]);
         while ($reg = $valistock->fetch_object()) {
-            if ($reg->vali == 0) {
+            if ($reg->vali == 0)
+            {
                 echo "Lo siento no hay unidades disponibles, No es posible realizar la venta";
                 return false;
             }
@@ -131,7 +132,7 @@ switch ($_GET["op"]) {
         while ($reg = $rspta->fetch_object()) {
 
             $data[] = array(
-                "0" => '<button class="btn btn-warning" onclick="agregarDetalle(' . $reg->idarticulo . ',\'' . $reg->nombre . '\',' . $reg->precio_venta . ')"><span class="fa fa-plus"></span></button>',
+                "0" => '<button class="btn btn-warning" onclick="agregarDetalle(' . $reg->stock ."," . $reg->idarticulo . ',\'' . $reg->nombre . '\',' . $reg->precio_venta . ')"><span class="fa fa-plus"></span></button>',
                 "1" => $reg->nombre,
                 "2" => $reg->categoria,
                 "3" => $reg->codigo,

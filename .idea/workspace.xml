@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1658e5ba-0e73-439f-b1b0-e60f76b0622d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modelos/Venta.php" beforeDir="false" afterPath="$PROJECT_DIR$/modelos/Venta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/venta.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/venta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistas/scripts/venta.js" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/scripts/venta.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +46,8 @@
       <workItem from="1643484609562" duration="11437000" />
       <workItem from="1643521529754" duration="2363000" />
       <workItem from="1643523918743" duration="9142000" />
-      <workItem from="1643548192567" duration="11425000" />
+      <workItem from="1643548192567" duration="13355000" />
+      <workItem from="1643563507712" duration="632000" />
     </task>
     <servers />
   </component>
@@ -57,10 +59,10 @@
       <screen x="0" y="0" width="1600" height="867" />
     </state>
     <state x="521" y="240" width="553" height="387" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.867@0.0.1600.867" timestamp="1643553041653" />
-    <state x="506" y="184" width="942" height="526" key="find.popup" timestamp="1643560465436">
+    <state x="506" y="184" width="942" height="526" key="find.popup" timestamp="1643563223238">
       <screen x="0" y="0" width="1600" height="867" />
     </state>
-    <state x="506" y="184" width="942" height="526" key="find.popup/0.0.1600.867@0.0.1600.867" timestamp="1643560465436" />
+    <state x="506" y="184" width="942" height="526" key="find.popup/0.0.1600.867@0.0.1600.867" timestamp="1643563223238" />
     <state x="461" y="82" width="672" height="678" key="search.everywhere.popup" timestamp="1643546962864">
       <screen x="0" y="0" width="1600" height="867" />
     </state>
